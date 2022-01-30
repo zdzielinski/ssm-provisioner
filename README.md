@@ -1,5 +1,7 @@
 # ssm-provisioner
 
+Latest version tag - [v0.0.1](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.1). <!-- standard-version -->
+
 A script that provides the ability to provision AWS instances via SSM.
 
 **NOTE**: This repository is currently unstable and a work in progress.
@@ -28,7 +30,17 @@ The following packages must be installed:
 
 The meat and potatoes of this project lives within the [ssm-provisioner.sh](./ssm-provisioner.sh) script.
 
-**TODO** - Document how to download and use this project easily.
+One method of using this script is to download it into your module via the latest tag:
+
+```bash
+cd <terraform_module> # example, move into your terraform module
+mkdir -p scripts && cd scripts # example, move into a scripts directory
+```
+
+```bash
+# download the latest script via the latest tag
+curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.1/ssm-provisioner.sh
+```
 
 Generally, this script would be leveraged within the provisioner of a `null_resource`:
 

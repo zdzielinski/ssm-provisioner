@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#
+# ssm-provisioner.sh
+# version - v0.0.1
+#
+
 # exit on error
 set -e
 
