@@ -26,7 +26,9 @@ The following packages must be installed:
 
 ## Usage
 
-TODO - Document how to download and use this project easily.
+The meat and potatoes of this project lives within the [ssm-provisioner.sh](./ssm-provisioner.sh) script.
+
+**TODO** - Document how to download and use this project easily.
 
 Generally, this script would be leveraged within the provisioner of a `null_resource`:
 
