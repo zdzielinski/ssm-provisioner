@@ -14,7 +14,7 @@ Unfortunately however, there is no standardized upstream SSM provisioner within 
 
 This module comes into play as a simple, configurable option for SSM provisioning of AWS instances.
 
-Instead of opening your instance up and provisioning over SSH, why not give this a try?
+Instead of opening your instance up and provisioning over SSH, why not give SSM a try?
 
 ## Requirements
 
@@ -47,10 +47,6 @@ resource "null_resource" "provisioner" {
 }
 ```
 
-## Examples
-
-A useful example of a working Terraform module is provided within the [example folder](./example).
-
 ## Inputs
 
 All inputs are provided as environment variables.
@@ -69,19 +65,21 @@ All inputs are provided as environment variables.
 |SSM_SLEEP|no|number|`1`|N/A|The time to sleep when waiting for SSM connection on the instance, in seconds|
 |DEBUG|no|bool|`false`|`true`, `false`|Enable bash debugging via `set -x`, sensitive output will be still be hidden|
 
+## Examples
+
+A useful example of a working Terraform module is provided within the [example folder](./example).
+
 ## Releases
 
-You can find information on releases in the [changelog documentation](./docs/CHANGELOG.md).
+You can browse the latest releases in the [tags page](/-/tags), with more details in the [changelog page](./docs/CHANGELOG.md).
 
 ## Contributing
 
-If you'd like to help out, please read the [contributing documentation](./docs/CONTRIBUTING.md).
+If you'd like to help out, please read the [contributing page](./docs/CONTRIBUTING.md).
 
 ## References
 
-Here are some additional reference links that may prove valuable for further insight:
-
-* [AWS - Enabling and controlling permissions for SSH connections through Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-getting-started-enable-ssh-connections.html)
+You can find additional reference documentation in the [references page](./docs/REFERENCES.md).
 
 ## License
 
