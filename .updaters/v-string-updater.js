@@ -11,6 +11,5 @@ module.exports.readVersion = function (contents) {
 // knowing current version, replace it's occurence with new version
 // replace instances of `v<currentVersion>` with `v<newVersion>
 module.exports.writeVersion = function (contents, newVersion) {
-  console.log(`Version: ${version}`);
-  return contents.replace(`v${currentVersion}`, `v${newVersion}`);
+  return contents.replace(new RegExp(`v${currentVersion}`, 'g'), `v${newVersion}`);
 }

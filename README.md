@@ -1,6 +1,6 @@
 # ssm-provisioner
 
-Latest version tag - [v0.0.1](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.1). <!-- standard-version -->
+Latest version tag - [v0.0.1](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.1).
 
 A script that provides the ability to provision AWS instances via SSM.
 
