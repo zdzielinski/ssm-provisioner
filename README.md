@@ -67,12 +67,6 @@ All inputs are provided as environment variables.
 |SSM_SLEEP|no|number|`1`|N/A|The time to sleep when waiting for SSM connection on the instance, in seconds|
 |DEBUG|no|bool|`false`|`true`, `false`|Enable bash debugging via `set -x`, sensitive output will be still be hidden|
 
-## Documentation
-
-Here are some additional documentation links that may prove valuable for further insight:
-
-* [AWS - Enabling and controlling permissions for SSH connections through Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-getting-started-enable-ssh-connections.html)
-
 ## Releases
 
 You can find information on releases in the [changelog documentation](./docs/CHANGELOG.md).
@@ -80,6 +74,12 @@ You can find information on releases in the [changelog documentation](./docs/CHA
 ## Contributing
 
 If you'd like to help out, please read the [contributing documentation](./docs/CONTRIBUTING.md).
+
+## References
+
+Here are some additional reference links that may prove valuable for further insight:
+
+* [AWS - Enabling and controlling permissions for SSH connections through Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-getting-started-enable-ssh-connections.html)
 
 ## License
 
