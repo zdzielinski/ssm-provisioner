@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "devDependencies": {
     "husky": "^7.0.4",
     "standard-version": "^9.3.2",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "release": "standard-version -i docs/CHANGELOG.md -n",
+    "release": "standard-version",
     "commit": "cz"
   },
   "config": {
