@@ -22,7 +22,7 @@ which aws >/dev/null || { >&2 echo "Error: The `aws` command is not installed"; 
 [ -z "${USERNAME}" ] && { >&2 echo "Error: The `USERNAME` environment variable is not set"; exit 1; }
 [ -z "${INSTANCE_ID}" ] && { >&2 echo "Error: The `INSTANCE_ID` environment variable is not set"; exit 1; }
 [ -z "${AWS_REGION}" ] && { >&2 echo "Error: The `AWS_REGION` environment variable is not set"; exit 1; }
-[ "$DEBUG" = true ] && set +x # hide the private key when debugging
+[ "$DEBUG" = true ] && set +x # hide sensitive content when debugging
 [ -z "${PRIVATE_KEY}" ] && { >&2 echo "Error: The `PRIVATE_KEY` environment variable is not set"; exit 1; }
 [ "$DEBUG" = true ] && set -x # reset into debug mode afterwards
 
@@ -69,9 +69,9 @@ done
 
 # ingest the private key
 eval $(ssh-agent) >/dev/null
-[ "$DEBUG" = true ] && set +x # hide the private key when debugging
+[ "$DEBUG" = true ] && set +x # hide sensitive content when debugging
 echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - >/dev/null
-[ "$DEBUG" = true ] && set +x # hide the private key when debugging
+[ "$DEBUG" = true ] && set -x # reset into debug mode afterwards
 
 # ingest and execute the script
 ssh -F $TMP_SSH_CONFIG \
