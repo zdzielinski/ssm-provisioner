@@ -4,6 +4,8 @@ A script that provides the ability to provision AWS instances via SSM.
 
 **NOTE**: This repository is currently unstable and a work in progress.
 
+**NOTE**: Any commits, tags, or other content that exists before release `v1.0.0` may be deleted or changed.
+
 ## Reasoning
 
 AWS SSM is a secure alternative to SSH for general command execution and remote shell capability.
