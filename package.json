@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "devDependencies": {
     "husky": "^7.0.4",
     "standard-version": "^9.3.2",
