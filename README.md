@@ -1,6 +1,6 @@
 # ssm-provisioner
 
-Latest version tag - [v0.0.1](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.1).
+Latest version tag - [v0.0.2](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.2).
 
 A script that provides the ability to provision AWS instances via SSM.
 
@@ -39,7 +39,7 @@ mkdir -p scripts && cd scripts # example, move into a scripts directory
 
 ```bash
 # download the latest script via the latest tag
-curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.1/ssm-provisioner.sh
+curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.2/ssm-provisioner.sh
 ```
 
 Generally, this script would be leveraged within the provisioner of a `null_resource`:

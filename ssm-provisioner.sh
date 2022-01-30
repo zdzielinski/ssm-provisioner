@@ -2,7 +2,7 @@
 
 #
 # ssm-provisioner.sh
-# version - v0.0.1
+# version - v0.0.2
 #
 
 # exit on error
