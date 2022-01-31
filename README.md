@@ -47,7 +47,7 @@ resource "null_resource" "provisioner" {
       SCRIPT      = "<path_to>/<script_name>"
       USERNAME    = "<username>"
       INSTANCE_ID = "<instance_id>"
-      AWS_REGION  = "<aws_region>>
+      AWS_REGION  = "<aws_region>"
       PRIVATE_KEY = nonsensitive(<private_key>)
     }
   }
