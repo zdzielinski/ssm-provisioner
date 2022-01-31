@@ -67,7 +67,7 @@ All inputs are provided as environment variables.
 |INSTANCE_ID|yes|string|N/A|N/A|The ID of the instance to connect to.|
 |AWS_REGION|yes|string|N/A|N/A|The AWS region to use when connecting to the instance.|
 |PRIVATE_KEY|yes|string|N/A|N/A|The private key content to use when connecting to the instance. The use of the `nonsensitive` function is suggested, otherwise the provisioner output will be hidden.|
-|ENVIRONMENT|no|string|N/A|N/A|Environment variables to set when executing the script. The use of a multi-line string is suggested for ease of formatting, but it is not required.|
+|ENVIRONMENT|no|string|N/A|N/A|Environment variables to set when executing the script remotely. The use of a multi-line `EOF` string is suggested for ease of formatting, but it is not required.|
 |SSH_COMMAND|no|string|`bash -s`|N/A|The SSH command to use when executing the script.|
 |SSH_PORT|no|number|`22`|N/A|The SSH port to use when connecting to the instance.|
 |SSH_TIMEOUT|no|number|`120`|N/A|The SSH timeout to use when connecting to the instance, in seconds.|
