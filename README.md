@@ -48,7 +48,7 @@ resource "null_resource" "provisioner" {
       USERNAME    = "<username>"
       INSTANCE_ID = "<instance_id>"
       AWS_REGION  = "<aws_region>"
-      PRIVATE_KEY = nonsensitive(<private_key>)
+      PRIVATE_KEY = nonsensitive("<private_key>")
     }
   }
 }
