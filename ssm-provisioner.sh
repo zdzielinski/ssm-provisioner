@@ -2,7 +2,8 @@
 
 #
 # ssm-provisioner.sh
-# version - v0.0.3
+# https://gitlab.com/zdzielinski/ssm-provisioner
+# v0.0.3
 #
 
 # exit on error
