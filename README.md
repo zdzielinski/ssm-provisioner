@@ -32,15 +32,9 @@ The following packages must be installed:
 
 The meat and potatoes of this project lives within the [ssm-provisioner.sh](./ssm-provisioner.sh) script.
 
-One method of using this script is to download it into your module via the latest tag:
+One method of using this script is to download it into your module via the latest release tag:
 
 ```bash
-cd <terraform_module> # example, move into your terraform module
-mkdir -p scripts && cd scripts # example, move into a scripts directory
-```
-
-```bash
-# download the latest script via the latest tag
 curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.2/ssm-provisioner.sh
 ```
 
@@ -50,14 +44,13 @@ Generally, this script would be leveraged within the provisioner of a `null_reso
 resource "null_resource" "provisioner" {
   provisioner "local-exec" {
     interpreter = ["/bin/bash", "-c"]
-    command     = "${path.module}/scripts/ssm-provisioner/ssm-provisioner.sh"
+    command     = "<path_to>/ssm-provisioner.sh"
     environment = {
-      SCRIPT      = "${path.module}/scripts/provisioner.sh"
+      SCRIPT      = "<path_to>/<script_name>"
       USERNAME    = "<username>"
-      INSTANCE_ID = aws_instance.ec2.id
-      AWS_REGION  = var.aws_region
-      # nonsensitive required, or provisioner output will be hidden
-      PRIVATE_KEY = nonsensitive(tls_private_key.key.private_key_pem)
+      INSTANCE_ID = "<instance_id>"
+      AWS_REGION  = "<aws_region>>
+      PRIVATE_KEY = nonsensitive(<private_key>)
     }
   }
 }
@@ -73,7 +66,8 @@ All inputs are provided as environment variables.
 |USERNAME|yes|string|N/A|N/A|The username to use when connecting to the instance|
 |INSTANCE_ID|yes|string|N/A|N/A|The ID of the instance to connect to|
 |AWS_REGION|yes|string|N/A|N/A|The AWS region to use when connecting to the instance|
-|PRIVATE_KEY|yes|string|N/A|N/A|The private key content to use when connecting to the instance|
+|PRIVATE_KEY|yes|string|N/A|N/A|The private key content to use when connecting to the instance, use of `nonsensitive` is suggested, otherwise provisioner output will be hidden|
+|ENVIRONMENT|no|string|N/A|N/A|Environment variables to set when executing the script, use of a multi-line string is suggested, but not required|
 |SSH_COMMAND|no|string|`bash -s`|N/A|The SSH command to use when executing the script|
 |SSH_PORT|no|number|`22`|N/A|The SSH port to use when connecting to the instance|
 |SSH_TIMEOUT|no|number|`120`|N/A|The SSH timeout to use when connecting to the instance, in seconds|

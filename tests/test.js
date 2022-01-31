@@ -30,7 +30,7 @@ async function runTests () {
   for (const module of modules) {
     // clean module (timeout: default)
     if (!runCmdTest(`cleaning: ${module}`, 
-      `rm -rf ${module}/.terraform* ${module}/terraform.tfstate*`)) {
+      `rm -rf ${module}/.terraform ${module}/terraform.tfstate*`)) {
       overallStatus = false; continue; // fail and continue to next module
     }
     // init module (timeout: default)

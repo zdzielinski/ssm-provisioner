@@ -82,4 +82,5 @@ echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - >/dev/null
 ssh -F $TMP_SSH_CONFIG \
   -p $SSH_PORT \
   -o ConnectTimeout=$SSH_TIMEOUT \
-  $USERNAME@$INSTANCE_ID $SSH_COMMAND < $SCRIPT
+  $USERNAME@$INSTANCE_ID \
+  $ENVIRONMENT $SSH_COMMAND < $SCRIPT
