@@ -87,7 +87,7 @@ Useful examples of working Terraform modules are provided within the [modules fo
 
 ## Releases
 
-You can browse the latest releases in the [tags page](/-/tags), with more details in the [changelog page](./docs/CHANGELOG.md).
+You can browse the latest releases in the [tags page](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags), with more details in the [changelog page](./docs/CHANGELOG.md).
 
 ## Contributing
 
