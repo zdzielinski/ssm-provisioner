@@ -16,7 +16,7 @@ DEBUG="${DEBUG:-false}"
 SSH_COMMAND="${SSH_COMMAND:-"bash -s"}"
 SSH_PORT="${SSH_TIMEOUT:-22}"
 SSH_TIMEOUT="${SSH_TIMEOUT:-120}"
-SSM_TIMEOUT="${SSM_TIMEOIUT:-120}"
+SSM_TIMEOUT="${SSM_TIMEOUT:-120}"
 SSM_SLEEP="${SSM_SLEEP:-1}"
 
 # verify client tools are installed
@@ -65,7 +65,7 @@ EOF
 NEXT_WAIT_TIME=0
 until [ $NEXT_WAIT_TIME -ge $SSM_TIMEOUT ] || [ "$SSM_STATUS" = "connected" ]; do
   sleep $SSM_SLEEP
-  ((NEXT_WAIT_TIME=NEXT_WAIT_TIME+SSM_TIMEOUT_SLEEP))
+  NEXT_WAIT_TIME=$((NEXT_WAIT_TIME+SSM_SLEEP))
   SSM_STATUS=$(aws ssm get-connection-status --target $INSTANCE_ID --query Status --output text)
 done
 
