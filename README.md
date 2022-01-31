@@ -2,7 +2,7 @@
 
 A script that provides the ability to provision AWS instances via SSM.
 
-[Version v0.0.2](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.2) - [Main GitLab Repository](https://gitlab.com/zdzielinski/ssm-provisioner) - [Secondary GitHub Mirror](https://github.com/zdzielinski/ssm-provisioner).
+[Version v0.0.3](https://gitlab.com/zdzielinski/ssm-provisioner/-/tags/v0.0.3) - [Main GitLab Repository](https://gitlab.com/zdzielinski/ssm-provisioner) - [Secondary GitHub Mirror](https://github.com/zdzielinski/ssm-provisioner).
 
 **NOTE**: This repository is currently unstable and a work in progress.
 
@@ -33,7 +33,7 @@ The meat and potatoes of this project lives within the [ssm-provisioner.sh](./ss
 One method of using this script is to download it into your module via the latest release tag:
 
 ```bash
-curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.2/ssm-provisioner.sh
+curl -sO https://gitlab.com/zdzielinski/ssm-provisioner/-/raw/v0.0.3/ssm-provisioner.sh
 ```
 
 Generally, this script would be leveraged within the provisioner of a `null_resource`:
