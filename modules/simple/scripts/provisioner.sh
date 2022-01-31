@@ -2,8 +2,8 @@
 
 echo "This is an example provisioner"
 
-echo "Sleeping for 10 seconds"
+echo "Sleeping for 3 seconds"
 
-sleep 10
+sleep 3
 
 echo "This provisioner has finished"

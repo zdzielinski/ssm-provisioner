@@ -81,7 +81,7 @@ All inputs are provided as environment variables.
 
 ## Examples
 
-A useful example of a working Terraform module is provided within the [example folder](./example).
+Useful examples of working Terraform modules are provided within the [modules folder](./modules).
 
 ## Releases
 

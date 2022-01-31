@@ -1,7 +1,7 @@
 resource "null_resource" "provisioner" {
   provisioner "local-exec" {
     interpreter = ["/bin/bash", "-c"]
-    command     = "${path.module}/../ssm-provisioner.sh"
+    command     = "${path.module}/../../ssm-provisioner.sh"
     environment = {
       SCRIPT      = "${path.module}/scripts/provisioner.sh"
       USERNAME    = "ubuntu"
@@ -9,6 +9,8 @@ resource "null_resource" "provisioner" {
       AWS_REGION  = var.aws_region
       # nonsensitive required, or provisioner output will be hidden
       PRIVATE_KEY = nonsensitive(tls_private_key.key.private_key_pem)
+      # this option is not recommended for production use
+      DEBUG = true
     }
   }
 }
