@@ -62,18 +62,18 @@ All inputs are provided as environment variables.
 
 |Name|Required|Type|Default|Valid Options|Description|
 |---|---|---|---|---|---|
-|SCRIPT|yes|string|N/A|N/A|The local path of the script to execute on the instance|
-|USERNAME|yes|string|N/A|N/A|The username to use when connecting to the instance|
-|INSTANCE_ID|yes|string|N/A|N/A|The ID of the instance to connect to|
-|AWS_REGION|yes|string|N/A|N/A|The AWS region to use when connecting to the instance|
-|PRIVATE_KEY|yes|string|N/A|N/A|The private key content to use when connecting to the instance, use of `nonsensitive` is suggested, otherwise provisioner output will be hidden|
-|ENVIRONMENT|no|string|N/A|N/A|Environment variables to set when executing the script, use of a multi-line string is suggested, but not required|
-|SSH_COMMAND|no|string|`bash -s`|N/A|The SSH command to use when executing the script|
-|SSH_PORT|no|number|`22`|N/A|The SSH port to use when connecting to the instance|
-|SSH_TIMEOUT|no|number|`120`|N/A|The SSH timeout to use when connecting to the instance, in seconds|
-|SSM_TIMEOUT|no|number|`120`|N/A|The timeout to use when waiting for SSM connection on the instance, in seconds|
-|SSM_SLEEP|no|number|`1`|N/A|The time to sleep when waiting for SSM connection on the instance, in seconds|
-|DEBUG|no|bool|`false`|`true`, `false`|Enable bash debugging via `set -x`, sensitive output will be still be hidden|
+|SCRIPT|yes|string|N/A|N/A|The local path of the script to execute on the instance.|
+|USERNAME|yes|string|N/A|N/A|The username to use when connecting to the instance.|
+|INSTANCE_ID|yes|string|N/A|N/A|The ID of the instance to connect to.|
+|AWS_REGION|yes|string|N/A|N/A|The AWS region to use when connecting to the instance.|
+|PRIVATE_KEY|yes|string|N/A|N/A|The private key content to use when connecting to the instance. The use of the `nonsensitive` function is suggested, otherwise the provisioner output will be hidden.|
+|ENVIRONMENT|no|string|N/A|N/A|Environment variables to set when executing the script. The use of a multi-line string is suggested, but not required.|
+|SSH_COMMAND|no|string|`bash -s`|N/A|The SSH command to use when executing the script.|
+|SSH_PORT|no|number|`22`|N/A|The SSH port to use when connecting to the instance.|
+|SSH_TIMEOUT|no|number|`120`|N/A|The SSH timeout to use when connecting to the instance, in seconds.|
+|SSM_TIMEOUT|no|number|`120`|N/A|The timeout to use when waiting for SSM connection on the instance, in seconds.|
+|SSM_SLEEP|no|number|`1`|N/A|The time to sleep when waiting for SSM connection on the instance, in seconds.|
+|DEBUG|no|bool|`false`|`true`, `false`|Enable bash debugging via `set -x`, sensitive output will be still be hidden.|
 
 ## Examples
 
