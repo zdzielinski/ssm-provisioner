@@ -2,7 +2,7 @@
 
 # ssm-provisioner.sh
 # https://gitlab.com/zdzielinski/ssm-provisioner
-# v0.0.3
+# v0.0.4
 
 # The MIT License
 # Copyright 2022 Zachariah Dzielinski
