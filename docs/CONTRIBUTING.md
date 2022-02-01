@@ -31,7 +31,15 @@ npm i
 
 After installation, versioned git hooks will be automatically linked via `husky`.
 
+## Submitting Issues
+
+The only location that issues are accepted is the within main [GitLab repository](https://gitlab.com/zdzielinski/ssm-provisioner).
+
+You may [open an issue](https://gitlab.com/zdzielinski/ssm-provisioner/-/issues/new) if you have a new feature request, or encounter a bug.
+
 ## Submitting Code
+
+The only location that changes are accepted is the within main [GitLab repository](https://gitlab.com/zdzielinski/ssm-provisioner).
 
 First, [create a fork](https://gitlab.com/zdzielinski/ssm-provisioner/-/forks/new) of the repository.
 
