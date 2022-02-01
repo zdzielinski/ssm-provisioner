@@ -45,8 +45,6 @@ First, [create a fork](https://gitlab.com/zdzielinski/ssm-provisioner/-/forks/ne
 
 Work on your proposed changes, ensure all of your commits follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 
-Any contributions that do not follow this standard will be rejected.
-
 When you are ready to submit your changes, [open a merge request](https://gitlab.com/zdzielinski/ssm-provisioner/-/merge_requests/new) in the repository.
 
 ## NPM References
