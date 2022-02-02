@@ -3,7 +3,7 @@ const standardVersion = require('standard-version')
 module.exports = {
   noVerify: true,
   commitAll: true,
-  infile: "docs/CHANGELOG.md",
+  infile: "CHANGELOG.md",
   packageFiles: [
     {
       filename: "package.json",
