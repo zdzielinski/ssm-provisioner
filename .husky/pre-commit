@@ -2,3 +2,26 @@
 . "$(dirname "$0")/_/husky.sh"
 
 gitleaks
+
+# a sneaky test for myself to ensure that
+# my contributions remain outside of work hours
+if test -f hack/.noworkinworkhours; then
+  echo "-- Verifying if commit is within work hours"
+  # pull current datetime variables
+  HOUR=$(date +"%-H")
+  MINUTE=$(date +"%-M")
+  DAYNUM=$(date +"%u")
+  # check if the commit is on a work day
+  if [ "$DAYNUM" -lt "6" ]; then
+    # check if the commit is within work hours
+    # work hour range is 9 AM <= $HOUR < 5 PM
+    # basically, any time between 9-5 is in work hours
+    if [ "$HOUR" -ge "9" ] && [ "$HOUR" -lt "17" ]; then
+      >&2 echo "-- Error: Work day work hours detected, stop it"
+      exit 1
+    else echo "-- Non work day work hours detected, good man"
+    fi
+  else echo "-- Non work day detected, goodluck and godspeed ;)"
+  fi
+else echo "-- Skipping commit work hours verification"
+fi
