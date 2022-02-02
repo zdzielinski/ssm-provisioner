@@ -16,7 +16,7 @@ if test -f .hidden/.noworkinworkhours; then
   WORK_HOURS_MIN="09:00"
   WORK_HOURS_MAX="17:00"
   # pull current time variables
-  DAY=$(date +"%u")
+  DAY=$(date +%u)
   TIME=$(date +%H:%M)
   # print an initial header
   echo "-- Verifying $TIME is outside of work hours"
