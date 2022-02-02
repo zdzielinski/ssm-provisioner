@@ -3,25 +3,41 @@
 
 gitleaks
 
+#
 # a sneaky test for myself to ensure that
 # my contributions remain outside of work hours
+#
+
+# work hours file detected
+# perform verification
 if test -f hack/.noworkinworkhours; then
-  echo "-- Verifying if commit is within work hours"
-  # pull current datetime variables
-  HOUR=$(date +"%-H")
-  MINUTE=$(date +"%-M")
-  DAYNUM=$(date +"%u")
+  # work hour specification variables
+  WORK_DAYS=("1" "2" "3" "4" "5")
+  WORK_HOURS_MIN="09:00"
+  WORK_HOURS_MAX="17:00"
+  # pull current time variables
+  DAY=$(date +"%u")
+  TIME=$(date +%H:%M)
+  # print an initial header
+  echo "-- Verifying $TIME is outside of work hours"
+  echo "-- Work days - ${WORK_DAYS[*]}"
+  echo "-- Work hours min time - $WORK_HOURS_MIN"
+  echo "-- Work hours max time - $WORK_HOURS_MAX"
   # check if the commit is on a work day
-  if [ "$DAYNUM" -lt "6" ]; then
+  if [[ "${WORK_DAYS[*]}" =~ " ${DAY} " ]]; then
     # check if the commit is within work hours
-    # work hour range is 9 AM <= $HOUR < 5 PM
-    # basically, any time between 9-5 is in work hours
-    if [ "$HOUR" -ge "9" ] && [ "$HOUR" -lt "17" ]; then
-      >&2 echo "-- Error: Work day work hours detected, stop it"
+    # use negation to obtain -ge and -le functionality
+    if ! [[ "$TIME" < "$WORK_HOURS_MIN" ]] && ! [[ "$TIME" > "$WORK_HOURS_MAX" ]]; then
+      # work day work hours detected, fail the verification
+      >&2 echo "-- Error: Work hours detected"
       exit 1
-    else echo "-- Non work day work hours detected, good man"
     fi
-  else echo "-- Non work day detected, goodluck and godspeed ;)"
   fi
-else echo "-- Skipping commit work hours verification"
+  # print a success message
+  echo "-- Success: Work hours not detected"
+# no work hours file detected
+# do not perform verification
+else
+  # print an informative message
+  echo "-- Skipping commit work hours verification"
 fi
