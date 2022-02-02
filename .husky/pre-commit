@@ -10,7 +10,7 @@ gitleaks
 
 # work hours file detected
 # perform verification
-if test -f hack/.noworkinworkhours; then
+if test -f .hidden/.noworkinworkhours; then
   # work hour specification variables
   WORK_DAYS=("1" "2" "3" "4" "5")
   WORK_HOURS_MIN="09:00"

@@ -178,4 +178,4 @@ dist
 #
 
 .vscode
-hack/
+.hidden
