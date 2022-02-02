@@ -21,6 +21,7 @@ Instead of opening your instance up and provisioning over SSH, why not give SSM 
 ## Requirements
 
 The following packages must be installed:
+
 * [OpenSSH](https://www.openssh.com/)
 * [Terraform](https://www.terraform.io/)
 * [AWS CLI](https://aws.amazon.com/cli/)
